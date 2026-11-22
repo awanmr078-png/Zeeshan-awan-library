@@ -7,113 +7,171 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 body{background:#0f172a;color:white}
-header{background:linear-gradient(90deg,#ff512f,#dd2476);padding:25px;text-align:center;position:sticky;top:0;z-index:100}
-header h1{font-size:32px}
-header p{font-size:16px;opacity:.9}
+
+/* ==== TUMHARI PHOTO WALA HEADER ==== */
+header{
+background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('zeeshan.jpg');
+background-size: cover;
+background-position: center top;
+background-repeat: no-repeat;
+padding: 70px 15px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:100;
+border-bottom: 4px solid #facc15;
+}
+header h1{
+font-size:36px;
+color:white;
+text-shadow: 2px 2px 10px black;
+}
+header p{
+font-size:17px;
+color:#facc15;
+font-weight:bold;
+margin-top:8px;
+text-shadow: 1px 1px 5px black;
+}
+header .owner{
+display:inline-block;
+background:#facc15;
+color:black;
+padding:6px 18px;
+border-radius:20px;
+font-weight:bold;
+margin-top:12px;
+font-size:14px;
+}
+
 nav{background:#1e293b;padding:12px;text-align:center}
-nav a{color:white;text-decoration:none;margin:0 15px;font-weight:bold}
+nav a{color:white;text-decoration:none;margin:0 10px;font-weight:bold}
 nav a:hover{color:#facc15}
-.hero{text-align:center;padding:40px 15px}
-.hero h2{font-size:30px;color:#facc15}
-.hero p{margin-top:10px;color:#cbd5e1}
+.hero{text-align:center;padding:35px 15px}
+.hero h2{font-size:28px;color:#facc15}
 .books{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;padding:25px}
-.book-card{background:#1e293b;border-radius:15px;padding:15px;text-align:center;transition:.3s;perspective:1000px}
+.book-card{background:#1e293b;border-radius:15px;padding:15px;text-align:center}
 .book-card:hover{transform:translateY(-8px)}
 .book-card img{width:100%;height:280px;object-fit:cover;border-radius:10px;transform:rotateY(-12deg) rotateX(5deg);box-shadow:15px 15px 30px rgba(0,0,0,.6);border-left:5px solid #facc15}
 .book-card h3{margin:12px 0 5px;font-size:18px}
 .book-card p{font-size:13px;color:#94a3b8}
-.btn{display:inline-block;background:#facc15;color:black;padding:8px 18px;border-radius:20px;text-decoration:none;font-weight:bold;margin-top:10px}
+.btn{display:inline-block;background:#facc15;color:black;padding:9px 20px;border-radius:20px;text-decoration:none;font-weight:bold;margin-top:10px}
+.btn2{display:inline-block;background:#dd2476;color:white;padding:9px 20px;border-radius:20px;text-decoration:none;font-weight:bold;margin-top:8px}
 .section-title{text-align:center;font-size:26px;margin:30px 0 10px;color:#facc15}
 .poetry-box{background:#1e293b;margin:15px;padding:20px;border-radius:15px;border-left:5px solid #dd2476}
 .poetry-box h3{color:#facc15}
 .page{background:#f8fafc;color:#0f172a;padding:30px;margin:20px;border-radius:15px;line-height:1.8}
-.page h2{color:#dd2476;margin-bottom:10px}
-footer{background:#020617;text-align:center;padding:20px;margin-top:30px}
+.page h2{color:#dd2476}
+footer{background:#020617;text-align:center;padding:20px}
 .ad-box{background:#facc15;color:black;text-align:center;padding:15px;margin:20px;border-radius:10px;font-weight:bold}
-input,textarea{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #ccc}
-button{background:#dd2476;color:white;padding:12px 25px;border:none;border-radius:20px;font-weight:bold;cursor:pointer}
+#reader{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);z-index:999;padding:10px}
+#reader iframe{width:100%;height:88%;background:white;border-radius:10px}
+#reader button{background:red;color:white;padding:10px 20px;border:none;border-radius:20px;font-weight:bold;margin-bottom:10px;cursor:pointer}
 </style>
 </head>
 <body>
 
 <header>
 <h1>Welcome to Zeeshan Awan Library</h1>
-<p>Books | Poetry | Knowledge | Free Reading</p>
+<p>Free Books | Urdu Poetry | Iqbal | Ghalib | Faiz | PDF Reading</p>
+<div class="owner">👋 Founder: Zeeshan Awan</div>
 </header>
 
 <nav>
 <a href="#home">Home</a>
 <a href="#books">Books</a>
+<a href="#urdu">Urdu Books</a>
 <a href="#poetry">Poetry</a>
 <a href="#privacy">Privacy Policy</a>
 <a href="#contact">Contact Us</a>
 </nav>
 
-<!-- ADSTERA AD YAHAN LAGEGA - TOP AD -->
-<div class="ad-box">
-<!-- YAHAN ADSTERA KA TOP AD CODE PASTE KARO -->
-ADSTERA AD - TOP BANNER
-</div>
+<div class="ad-box"><!-- ADSTERA TOP AD --> ADSTERA AD - TOP</div>
 
 <div class="hero" id="home">
 <h2>Zeeshan Awan Library Me Khush Amdeed!</h2>
-<p>Yahan aap ko Poetry, Novels, Islamic, History, Motivational aur Horror books free me parhne ko milengi.</p>
+<p>Faiz, Iqbal, Ghalib ki books ab Free PDF me parho!</p>
 </div>
 
-<h2 class="section-title" id="books">📚 Our Top 10 Books</h2>
+<h2 class="section-title" id="urdu">📚 Urdu Books - Iqbal | Ghalib | Faiz</h2>
 
 <div class="books">
-<div class="book-card"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400" alt="Book 1"><h3>Talking with Psychopaths</h3><p>Christopher Berry-Dee | Crime / Psychology</p><a class="btn" href="#">Read Now</a></div>
-<div class="book-card"><img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400" alt="Book 2"><h3>Shayari Ka Jahan</h3><p>Zeeshan Awan | Urdu Poetry</p><a class="btn" href="#">Read Now</a></div>
-<div class="book-card"><img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400" alt="Book 3"><h3>Peer-e-Kamil</h3><p>Umera Ahmed | Urdu Novel</p><a class="btn" href="#">Read Now</a></div>
-<div class="book-card"><img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=400" alt="Book 4"><h3>Islamic History</h3><p>History | Islamic Books</p><a class="btn" href="#">Read Now</a></div>
-<div class="book-card"><img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=400" alt="Book 5"><h3>Motivational Stories</h3><p>Self Growth | Motivation</p><a class="btn" href="#">Read Now</a></div>
-<div class="book-card"><img src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=400" alt="Book 6"><h3>Dard Bhari Shayari</h3><p>Poetry | Sad Poetry</p><a class="btn" href="#">Read Now</a></div>
-<div class="book-card"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400" alt="Book 7"><h3>Horror Nights</h3><p>Horror | Thriller</p><a class="btn" href="#">Read Now</a></div>
-<div class="book-card"><img src="https://images.unsplash.com/photo-1524578271613-d550eacf6090?w=400" alt="Book 8"><h3>Love Poetry</h3><p>Romantic Poetry</p><a class="btn" href="#">Read Now</a></div>
-<div class="book-card"><img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=400" alt="Book 9"><h3>Seerat-un-Nabi</h3><p>Islamic | Seerat</p><a class="btn" href="#">Read Now</a></div>
-<div class="book-card"><img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400" alt="Book 10"><h3>Success Mindset</h3><p>Business | Success</p><a class="btn" href="#">Read Now</a></div>
+<div class="book-card" style="border:2px solid #facc15">
+<img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400">
+<h3>Nuskha Haye Wafa</h3><p>Faiz Ahmed Faiz | Urdu Poetry</p>
+<a class="btn" href="https://www.rekhta.org/ebooks/faiz-ahmed-faiz-nuskha-haye-wafa-ebooks" target="_blank">📖 Read Now</a>
+</div>
+<div class="book-card" style="border:2px solid #00ff88">
+<img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400">
+<h3>Bang-e-Dara</h3><p>Allama Iqbal | Urdu Poetry - Free</p>
+<a class="btn" href="https://www.rekhta.org/ebooks/allama-iqbal-bang-e-dara-ebooks" target="_blank">📖 Read PDF</a>
+</div>
+<div class="book-card" style="border:2px solid #00ff88">
+<img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=400">
+<h3>Bal-e-Jibril</h3><p>Allama Iqbal | Famous Poetry</p>
+<a class="btn" href="https://www.rekhta.org/ebooks/allama-iqbal-bal-e-jibril-ebooks" target="_blank">📖 Read PDF</a>
+</div>
+<div class="book-card">
+<img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400">
+<h3>Zarb-e-Kaleem</h3><p>Allama Iqbal | Urdu Poetry</p>
+<a class="btn" href="https://www.rekhta.org/ebooks/allama-iqbal-zarb-e-kaleem-ebooks" target="_blank">📖 Read PDF</a>
+</div>
+<div class="book-card" style="border:2px solid #ff512f">
+<img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=400">
+<h3>Diwan-e-Ghalib</h3><p>Mirza Ghalib | Urdu Poetry - Free</p>
+<a class="btn" href="https://www.rekhta.org/ebooks/mirza-ghalib-diwan-e-ghalib-ebooks" target="_blank">📖 Read PDF</a>
+</div>
+<div class="book-card">
+<img src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=400">
+<h3>Armughan-e-Hijaz</h3><p>Allama Iqbal | Last Book</p>
+<a class="btn" href="https://www.rekhta.org/ebooks/allama-iqbal-armughan-e-hijaz-ebooks" target="_blank">📖 Read PDF</a>
+</div>
 </div>
 
-<!-- ADSTERA AD - MIDDLE -->
-<div class="ad-box">
-<!-- YAHAN ADSTERA KA MIDDLE AD CODE PASTE KARO -->
-ADSTERA AD - MIDDLE BANNER
+<h2 class="section-title" id="books">📚 English Free PDF Books</h2>
+<div class="books">
+<div class="book-card"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400"><h3>Pride and Prejudice</h3><p>Jane Austen | Novel</p><a class="btn" href="https://www.gutenberg.org/files/1342/1342-pdf.pdf" target="_blank">📖 Read PDF</a><br><a class="btn2" href="#" onclick="openPDF('https://www.gutenberg.org/files/1342/1342-pdf.pdf');return false;">👀 Yahi Parho</a></div>
+<div class="book-card"><img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400"><h3>Sherlock Holmes</h3><p>Arthur Conan Doyle | Mystery</p><a class="btn" href="https://www.gutenberg.org/files/1661/1661-pdf.pdf" target="_blank">📖 Read PDF</a><br><a class="btn2" href="#" onclick="openPDF('https://www.gutenberg.org/files/1661/1661-pdf.pdf');return false;">👀 Yahi Parho</a></div>
+<div class="book-card"><img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=400"><h3>Alice in Wonderland</h3><p>Lewis Carroll</p><a class="btn" href="https://www.gutenberg.org/files/11/11-pdf.pdf" target="_blank">📖 Read PDF</a><br><a class="btn2" href="#" onclick="openPDF('https://www.gutenberg.org/files/11/11-pdf.pdf');return false;">👀 Yahi Parho</a></div>
+<div class="book-card"><img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=400"><h3>Dracula</h3><p>Bram Stoker | Horror</p><a class="btn" href="https://www.gutenberg.org/files/345/345-pdf.pdf" target="_blank">📖 Read PDF</a><br><a class="btn2" href="#" onclick="openPDF('https://www.gutenberg.org/files/345/345-pdf.pdf');return false;">👀 Yahi Parho</a></div>
+<div class="book-card"><img src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=400"><h3>Frankenstein</h3><p>Mary Shelley</p><a class="btn" href="https://www.gutenberg.org/files/84/84-pdf.pdf" target="_blank">📖 Read PDF</a><br><a class="btn2" href="#" onclick="openPDF('https://www.gutenberg.org/files/84/84-pdf.pdf');return false;">👀 Yahi Parho</a></div>
+<div class="book-card"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400"><h3>Great Expectations</h3><p>Charles Dickens</p><a class="btn" href="https://www.gutenberg.org/files/1400/1400-pdf.pdf" target="_blank">📖 Read PDF</a><br><a class="btn2" href="#" onclick="openPDF('https://www.gutenberg.org/files/1400/1400-pdf.pdf');return false;">👀 Yahi Parho</a></div>
+<div class="book-card"><img src="https://images.unsplash.com/photo-1524578271613-d550eacf6090?w=400"><h3>Jane Eyre</h3><p>Charlotte Bronte</p><a class="btn" href="https://www.gutenberg.org/files/1260/1260-pdf.pdf" target="_blank">📖 Read PDF</a><br><a class="btn2" href="#" onclick="openPDF('https://www.gutenberg.org/files/1260/1260-pdf.pdf');return false;">👀 Yahi Parho</a></div>
+<div class="book-card"><img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=400"><h3>Moby Dick</h3><p>Herman Melville</p><a class="btn" href="https://www.gutenberg.org/files/2701/2701-pdf.pdf" target="_blank">📖 Read PDF</a><br><a class="btn2" href="#" onclick="openPDF('https://www.gutenberg.org/files/2701/2701-pdf.pdf');return false;">👀 Yahi Parho</a></div>
 </div>
 
-<h2 class="section-title" id="poetry">✍️ Poetry Collection</h2>
-<div class="poetry-box"><h3>1. Teri Yaad</h3><p>Teri yaad me raat guzar gayi,<br>Dil ki duniya ujar gayi...</p></div>
-<div class="poetry-box"><h3>2. Mohabbat</h3><p>Mohabbat me jeena bhi kya,<br>Teri judai me marna bhi kya...</p></div>
-<div class="poetry-box"><h3>3. Zindagi</h3><p>Zindagi ek safar hai,<br>Har mod pe naya asar hai...</p></div>
+<div class="ad-box"><!-- ADSTERA MIDDLE AD --> ADSTERA AD - MIDDLE</div>
+
+<h2 class="section-title" id="poetry">✍️ Famous Poetry</h2>
+<div class="poetry-box"><h3>Faiz - Mujh Se Pehli Si Mohabbat</h3><p>Mujh se pehli si mohabbat mere mehboob na maang...</p></div>
+<div class="poetry-box"><h3>Iqbal - Khudi Ko Kar Buland Itna</h3><p>Khudi ko kar buland itna ke har taqdeer se pehle, Khuda bande se khud poochhe bata teri raza kya hai...</p></div>
+<div class="poetry-box"><h3>Ghalib - Hazaaron Khwahishen Aisi</h3><p>Hazaaron khwahishen aisi ke har khwahish pe dam nikle...</p></div>
 
 <div class="page" id="privacy">
 <h2>Privacy Policy - Zeeshan Awan Library</h2>
-<p>Welcome to Zeeshan Awan Library. Hum aap ki privacy ka khayal rakhte hain. Hum aap ka naam, email sirf contact ke liye use karte hain. Hum aap ki information kisi teesri party ko nahi dete. Is website par Adsterra ke ads show hote hain jo cookies use kar sakte hain. Agar aap ko koi aitraz ho to hum se rabta karein.</p>
-<p>Last Updated: 2026</p>
+<p>Hum aap ki privacy ka khayal rakhte hain. Hum aap ka data kisi ko nahi dete. Is site par Adsterra ads hain jo cookies use kar sakte hain. Sari books free / public domain hain.</p>
 </div>
 
 <div class="page" id="contact">
 <h2>Contact Us</h2>
-<p>Agar aap ko koi book chahiye ya apni book upload karni hai to neeche form bharein.</p>
-<form>
-<input type="text" placeholder="Apna Naam Likhein" required>
-<input type="email" placeholder="Apna Email Likhein" required>
-<textarea rows="4" placeholder="Apna Message Likhein"></textarea>
-<button type="submit">Send Message</button>
-</form>
-<p><b>Email:</b> zeeshanawanlibrary@gmail.com<br><b>WhatsApp:</b> +92 300 0000000<br><b>Location:</b> Peshawar, Pakistan</p>
+<p><b>Email:</b> zeeshanawanlibrary@gmail.com<br><b>Location:</b> Peshawar, Pakistan</p>
+<form><input type="text" placeholder="Apna Naam" required><input type="email" placeholder="Email" required><textarea rows="4" placeholder="Message"></textarea><button style="background:#dd2476;color:white;padding:12px 25px;border:none;border-radius:20px;font-weight:bold">Send Message</button></form>
 </div>
 
-<!-- ADSTERA AD - BOTTOM -->
-<div class="ad-box">
-<!-- YAHAN ADSTERA KA BOTTOM / POPUNDER CODE PASTE KARO -->
-ADSTERA AD - BOTTOM
+<div class="ad-box"><!-- ADSTERA BOTTOM AD --> ADSTERA AD - BOTTOM</div>
+<footer><p>© 2026 Zeeshan Awan Library | Founder Zeeshan Awan | All Rights Reserved</p></footer>
+
+<div id="reader">
+<button onclick="document.getElementById('reader').style.display='none'">❌ Close / Band Karo</button>
+<iframe id="pdfFrame" src=""></iframe>
 </div>
 
-<footer>
-<p>© 2026 Zeeshan Awan Library | All Rights Reserved | Made with ❤️ in Peshawar</p>
-<p><a href="#privacy" style="color:white">Privacy Policy</a> | <a href="#contact" style="color:white">Contact Us</a></p>
-</footer>
+<script>
+function openPDF(link){
+document.getElementById('pdfFrame').src = link;
+document.getElementById('reader').style.display='block';
+}
+</script>
 
 </body>
 </html>
